@@ -1,0 +1,51 @@
+<script lang="ts">
+  import type { PageData } from './$types';
+
+  export let data: PageData;
+
+  import ChartExampleImage from '$lib/assets/images/fundy5.png';
+
+  $: data.title = 'Charts';
+</script>
+
+<section id="charts-info" class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row">
+    <img src={ChartExampleImage} />
+    <div>
+      <h1 class="text-5xl font-bold">What about charts?</h1>
+      <p class="">
+        Unfortunatly, we are unable to provide pilots with charts at this time. There are many
+        different places where you can access charts for free online.
+      </p>
+      <br />
+      <p>
+        The best option for IFR charts is <a
+          href="https://navigraph.com"
+          target="_blank"
+          class="link">Navigraph</a
+        > which provides Jeppesen charts and FMS data for a monthly subscription.
+      </p>
+      <br />
+      <p class="">
+        For airport charts, <a href="https://fltplan.com" target="_blank" class="link"
+          >fltplan.com</a
+        > is a great resource and has all Canadian charts availible with a free account. They even include
+        moving charts if you use their app!
+      </p>
+      <br />
+      <p>
+        For VFR sectionals, <a href="https://skyvector.com" target="_blank" class="link"
+          >Skyvector</a
+        > has the majority of Canadian VFR charts
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    width: 40%;
+    height: auto;
+    transform: rotate(-90deg);
+  }
+</style>
