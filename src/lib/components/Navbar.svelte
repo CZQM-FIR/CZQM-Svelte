@@ -93,7 +93,9 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <a href="/login" class="btn"><span class="icon-[mdi--login-variant]"></span> Login</a>
+      <a href={$page.data.connectEndpoint} class="btn"
+        ><span class="icon-[mdi--login-variant]"></span> Login</a
+      >
     </div>
   </div>
 
