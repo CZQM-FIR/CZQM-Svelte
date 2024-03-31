@@ -105,7 +105,7 @@
       <h1 class="mx-auto font-semibold">
         {#if $page.data.headline.event}
           <a class="hover:link" href="/events/{$page.data.headline.event._id}"
-            ><span class="hidden md:inline">Upcomming Event:</span>
+            ><span class="hidden md:inline">Upcoming Event:</span>
             {$page.data.headline.event.name}</a
           >
         {/if}
