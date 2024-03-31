@@ -26,6 +26,13 @@
         > which provides Jeppesen charts and FMS data for a monthly subscription.
       </p>
       <br />
+      <p>
+        The <a href="https://www.navcanada.ca/en/ecfs_07_en.pdf" target="_blank" class="link"
+          >Canada Flight Supplement</a
+        > is a great option for accessing airport charts and procedure charts for all airports across
+        Canada.
+      </p>
+      <br />
       <p class="">
         For airport charts, <a href="https://fltplan.com" target="_blank" class="link"
           >fltplan.com</a
