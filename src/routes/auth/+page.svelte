@@ -12,7 +12,7 @@
   onMount(async () => {
     const code = $page.url.searchParams.get('code');
     if (code) {
-      const res = await fetch(`${PUBLIC_API_ROUTE}/login/${code}`, {
+      const res = await fetch(`${PUBLIC_API_ROUTE}/auth/callback?code=${code}`, {
         method: 'POST',
         credentials: 'include'
       });

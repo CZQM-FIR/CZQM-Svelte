@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { PUBLIC_API_ROUTE } from '$env/static/public';
 </script>
 
 <nav class="bg-base-100 fixed w-screen z-50">
@@ -93,9 +94,26 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <a href={$page.data.connectEndpoint} class="btn"
-        ><span class="icon-[mdi--login-variant]"></span> Login</a
-      >
+      {#if $page.data.user && $page.data.user.personal}
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost">
+            <span class="icon-[mdi--account]"></span>
+            {$page.data.user.personal.name_full}
+          </div>
+          <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box">
+            <li><a href="/my"><span class="icon-[mdi--account-edit]"></span> MyCZQM</a></li>
+            <li>
+              <a href={`${PUBLIC_API_ROUTE}/auth/logout`}
+                ><span class="icon-[mdi--logout]"></span> Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      {:else}
+        <a href={$page.data.connectEndpoint} class="btn"
+          ><span class="icon-[mdi--login-variant]"></span> Login</a
+        >
+      {/if}
     </div>
   </div>
 

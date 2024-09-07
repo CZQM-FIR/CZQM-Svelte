@@ -13,10 +13,13 @@ export const load = (async ({ fetch, url, cookies }) => {
   const endpointRes = await fetch(`${PUBLIC_API_ROUTE}/vatsim-connect`);
   const { endpoint: connectEndpoint } = await endpointRes.json();
 
-  if (cookies.get('jwt')) {
+  let user = undefined
+
+  if (cookies.get('session')) {
     const userRes = await fetch(`${PUBLIC_API_ROUTE}/user`, {
       credentials: 'include'
     });
+    user = await userRes.json();
   }
 
   return {
@@ -26,6 +29,7 @@ export const load = (async ({ fetch, url, cookies }) => {
     },
     title: '',
     url: url.pathname,
-    connectEndpoint
+    connectEndpoint,
+    user
   };
 }) satisfies LayoutServerLoad;
