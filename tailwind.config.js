@@ -1,13 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui"
+import typograpy from "@tailwindcss/typography"
+import iconify from "@iconify/tailwind"
+
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {}
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    require('daisyui'),
-    require('@iconify/tailwind').addDynamicIconSelectors()
+    typograpy,
+    daisyui,
+    iconify
   ],
   daisyui: {
     themes: [
