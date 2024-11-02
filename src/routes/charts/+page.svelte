@@ -1,11 +1,15 @@
 <script lang="ts">
   import type { PageData } from './$types';
 
-  export let data: PageData;
 
   import ChartExampleImage from '$lib/assets/images/fundy5.png';
+  interface Props {
+    data: PageData;
+  }
 
-  $: data.title = 'Charts';
+  let { data = $bindable() }: Props = $props();
+
+  data.title = 'Charts'
 </script>
 
 <section id="charts-info" class="hero min-h-screen bg-base-200">

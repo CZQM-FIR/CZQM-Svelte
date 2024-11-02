@@ -3,7 +3,11 @@
   import { page } from '$app/stores';
   import PageTitle from '$lib/components/PageTitle.svelte';
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
+
+  let { data = $bindable() }: Props = $props();
 
   data.title = 'FIR News';
 

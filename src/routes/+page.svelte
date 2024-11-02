@@ -2,7 +2,11 @@
   import type { PageData } from './$types';
   import { page } from '$app/stores';
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
 </script>
 
 <section id="hero" class="hero min-h-screen">
