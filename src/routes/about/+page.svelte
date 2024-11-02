@@ -46,7 +46,7 @@
           volunteers and it may take 24-48 hours before you recieve a response.
         </p>
         <div class="join">
-          <a href="/faq" class="btn btn-primary join-item">FAQs</a>
+          <a href="https://wiki.czqm.ca/en/faqs" class="btn btn-primary join-item">FAQs</a>
           <a href="/contact" class="btn btn-primary join-item">Contact Us</a>
         </div>
       </div>
