@@ -1,5 +1,9 @@
 <script lang="ts">
-  export let roster: Number;
+  interface Props {
+    roster: Number;
+  }
+
+  let { roster }: Props = $props();
 </script>
 
 {#if roster === -1}

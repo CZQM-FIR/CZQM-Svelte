@@ -7,7 +7,12 @@
   import Footer from '$lib/components/Footer.svelte';
   import Navbar from '$lib/components/Navbar.svelte';
 
-  export let data: LayoutData;
+  interface Props {
+    data: LayoutData;
+    children?: import('svelte').Snippet;
+  }
+
+  let { data, children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -17,7 +22,7 @@
 <Navbar />
 
 <main>
-  <slot />
+  {@render children?.()}
 </main>
 
 <Footer />

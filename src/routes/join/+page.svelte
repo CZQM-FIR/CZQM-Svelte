@@ -2,9 +2,13 @@
   import type { PageData } from './$types';
   import PageTitle from '$lib/components/PageTitle.svelte';
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
 
-  $: data.title = 'Join Us';
+  let { data = $bindable() }: Props = $props();
+
+  data.title = 'Join Us'
 </script>
 
 <section id="join" class="min-h-screen">

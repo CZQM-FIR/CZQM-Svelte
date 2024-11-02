@@ -1,11 +1,14 @@
 <script lang="ts">
   import type { PageData } from './$types';
 
-  export let data: PageData;
-
   import SimpleBlackAirspaceImage from '$lib/assets/images/simple-black-airspace.png';
+  interface Props {
+    data: PageData;
+  }
 
-  $: data.title = 'About Us';
+  let { data = $bindable() }: Props = $props();
+
+  data.title = 'About Us'
 </script>
 
 <section id="about" class="bg-base-200">

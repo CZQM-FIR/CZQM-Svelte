@@ -5,7 +5,11 @@
   import { page } from '$app/stores';
   import { PUBLIC_API_ROUTE } from '$env/static/public';
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
+
+  let { data = $bindable() }: Props = $props();
 
   data.title = 'Authorizing';
 

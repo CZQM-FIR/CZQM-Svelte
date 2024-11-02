@@ -5,10 +5,14 @@
   import type { PageData } from './$types';
   import { onMount } from 'svelte';
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
 
-  let search = '';
-  let controllers: any[] = [];
+  let { data = $bindable() }: Props = $props();
+
+  let search = $state('');
+  let controllers: any[] = $state([]);
 
   onMount(() => {
     filterControllers();
@@ -37,7 +41,7 @@
           class="grow"
           placeholder="Search"
           bind:value={search}
-          on:input={filterControllers}
+          oninput={filterControllers}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"

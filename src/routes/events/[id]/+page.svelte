@@ -3,9 +3,13 @@
   import PageTitle from '$lib/components/PageTitle.svelte';
   import type { PageData } from './$types';
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
 
-  $: data.title = `Event Details`;
+  let { data = $bindable() }: Props = $props();
+
+  data.title = `Event Details`
 
   let event = $page.data.eventInfo;
 
