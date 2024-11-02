@@ -20,9 +20,10 @@
     <nav>
       <h6 class="footer-title">Quick Links</h6>
       <a href="/about" class="link link-hover">About Us</a>
-      <a href="/faq" class="link link-hover">FAQs</a>
+      <a href="https://wiki.czqm.ca/en/faqs" class="link link-hover">FAQs</a>
       <a href="/join" class="link link-hover">Join Us</a>
       <a href="/contact" class="link link-hover">Contact Us</a>
+      <a href="https://wiki.czqm.ca" class="link link-hover">Wiki</a>
     </nav>
     <nav>
       <h6 class="footer-title">Connect With Us</h6>
