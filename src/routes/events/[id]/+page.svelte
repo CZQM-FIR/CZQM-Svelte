@@ -9,7 +9,7 @@
 
   let { data = $bindable() }: Props = $props();
 
-  data.title = `Event Details`
+  data.title = `Event Details`;
 
   let event = $page.data.eventInfo;
 

@@ -1,5 +1,11 @@
 <script>
   import CZQMLogo from '$lib/assets/images/CZQM-White.svg';
+  import {
+    IconBrandDiscordFilled,
+    IconBrandFacebookFilled,
+    IconBrandTwitterFilled,
+    IconBrandYoutubeFilled
+  } from '@tabler/icons-svelte';
 </script>
 
 <footer class="py-10 md:p-10 bg-base-200 text-base-content">
@@ -28,17 +34,15 @@
     <nav>
       <h6 class="footer-title">Connect With Us</h6>
       <a href="https://twitter.com/czqm_fir" class="link link-hover"
-        ><span class="icon-[mdi--twitter]"></span> Twitter</a
+        ><IconBrandTwitterFilled /> Twitter</a
       >
       <a href="https://www.facebook.com/CZQMFIR/" class="link link-hover"
-        ><span class="icon-[mdi--facebook]"></span> FaceBook</a
+        ><IconBrandFacebookFilled /> FaceBook</a
       >
       <a href="https://www.youtube.com/channel/UCS5H_U3h6edXWashMjQpuAg" class="link link-hover"
-        ><span class="icon-[mdi--youtube]"></span> Youtube</a
+        ><IconBrandYoutubeFilled /> Youtube</a
       >
-      <a href="/portal/discord" class="link link-hover"
-        ><span class="icon-[ic--baseline-discord]"></span> Discord</a
-      >
+      <a href="/portal/discord" class="link link-hover"><IconBrandDiscordFilled /> Discord</a>
     </nav>
   </div>
 </footer>

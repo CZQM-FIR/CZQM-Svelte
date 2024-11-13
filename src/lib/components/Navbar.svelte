@@ -1,7 +1,20 @@
-<script lang="ts">
+<script>
   import { page } from '$app/stores';
   import { PUBLIC_API_ROUTE } from '$env/static/public';
+  import {
+    IconClipboardData,
+    IconCurrentLocation,
+    IconList,
+    IconLogin2,
+    IconLogout,
+    IconReportSearch,
+    IconUserCircle,
+    IconUserFilled,
+    IconUserPlus
+  } from '@tabler/icons-svelte';
 </script>
+
+<!-- Remember when adding items to nav bar to add to both mobile and desktop navbars -->
 
 <nav class="bg-base-100 fixed w-screen z-50">
   <div class="container navbar mx-auto top-0">
@@ -30,11 +43,11 @@
             <details>
               <summary>Controllers</summary>
               <ul class="p-2">
-                <li><a href="/staff"><span class="icon-[mdi--administrator]"></span> Staff</a></li>
+                <li><a href="/staff"><IconClipboardData /> Staff</a></li>
                 <li>
-                  <a href="/roster"><span class="icon-[mdi--account-group]"></span> Roster</a>
+                  <a href="/roster"><IconList /> Roster</a>
                 </li>
-                <li><a href="/join"><span class="icon-[mdi--account-add]"></span> Join Us</a></li>
+                <li><a href="/join"><IconUserPlus /> Join Us</a></li>
               </ul>
             </details>
           </li>
@@ -43,11 +56,9 @@
               <summary>Pilots</summary>
               <ul class="p-2">
                 <li>
-                  <a href="/pilot-resources"
-                    ><span class="icon-[mdi--clipboard-text]"></span> Resources</a
-                  >
+                  <a href="/pilot-resources"><IconReportSearch /> Resources</a>
                 </li>
-                <li><a href="/charts"><span class="icon-[mdi--map]"></span> Charts</a></li>
+                <li><a href="/charts"><IconCurrentLocation /> Charts</a></li>
               </ul>
             </details>
           </li>
@@ -67,11 +78,11 @@
           <div class="dropdown dropdown-bottom">
             <div tabindex="0" role="button">Controllers</div>
             <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a href="/staff"><span class="icon-[mdi--administrator]"></span> Staff</a></li>
+              <li><a href="/staff"><IconClipboardData /> Staff</a></li>
               <li>
-                <a href="/roster"><span class="icon-[mdi--account-group]"></span> Roster</a>
+                <a href="/roster"><IconList /> Roster</a>
               </li>
-              <li><a href="/join"><span class="icon-[mdi--account-add]"></span> Join Us</a></li>
+              <li><a href="/join"><IconUserPlus /> Join Us</a></li>
             </ul>
           </div>
         </li>
@@ -80,11 +91,9 @@
             <div tabindex="0" role="button">Pilots</div>
             <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
               <li>
-                <a href="/pilot-resources"
-                  ><span class="icon-[mdi--clipboard-text]"></span> Resources</a
-                >
+                <a href="/pilot-resources"><IconReportSearch /> Resources</a>
               </li>
-              <li><a href="/charts"><span class="icon-[mdi--map]"></span> Charts</a></li>
+              <li><a href="/charts"><IconCurrentLocation /> Charts</a></li>
             </ul>
           </div>
         </li>
@@ -97,22 +106,18 @@
       {#if $page.data.user && $page.data.user.personal}
         <div class="dropdown dropdown-end">
           <div tabindex="0" role="button" class="btn btn-ghost">
-            <span class="icon-[mdi--account]"></span>
+            <IconUserFilled />
             {$page.data.user.personal.name_full}
           </div>
           <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box">
-            <li><a href="/my"><span class="icon-[mdi--account-edit]"></span> MyCZQM</a></li>
+            <li><a href="/my"><IconUserCircle /> MyCZQM</a></li>
             <li>
-              <a href={`${PUBLIC_API_ROUTE}/auth/logout`}
-                ><span class="icon-[mdi--logout]"></span> Logout</a
-              >
+              <a href={`${PUBLIC_API_ROUTE}/auth/logout`}><IconLogout /> Logout</a>
             </li>
           </ul>
         </div>
       {:else}
-        <a href={$page.data.connectEndpoint} class="btn"
-          ><span class="icon-[mdi--login-variant]"></span> Login</a
-        >
+        <a href={$page.data.connectEndpoint} class="btn"><IconLogin2 /> Login</a>
       {/if}
     </div>
   </div>

@@ -8,7 +8,7 @@
 
   let { data = $bindable() }: Props = $props();
 
-  data.title = 'About Us'
+  data.title = 'About Us';
 </script>
 
 <section id="about" class="bg-base-200">

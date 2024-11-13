@@ -8,7 +8,7 @@
 
   let { data = $bindable() }: Props = $props();
 
-  data.title = 'Join Us'
+  data.title = 'Join Us';
 </script>
 
 <section id="join" class="min-h-screen">
