@@ -1,7 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+// /** @type {import('tailwindcss').Config} */
 import daisyui from "daisyui"
 import typograpy from "@tailwindcss/typography"
-import iconify from "@iconify/tailwind"
 
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -11,7 +10,6 @@ export default {
   plugins: [
     typograpy,
     daisyui,
-    iconify
   ],
   daisyui: {
     themes: [
